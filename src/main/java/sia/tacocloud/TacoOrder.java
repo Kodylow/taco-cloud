@@ -1,7 +1,5 @@
 package sia.tacocloud;
 
-import lombok.Data;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,9 +23,13 @@ public class TacoOrder {
     private String deliveryZip;
 
     // Credit Card Payment Information
-
+    @NotBlank(message="Not a valid credit card number")
     private String ccNumber;
+
+    @Pattern(regexp="^(0[1-9]1[0-2])([\\/])([2-9][0-9])$", message="Must be formatted MM/YY")
     private String ccExpiration;
+
+    @NotBlank(message="")
     private String ccCVV;
 
     private List<Taco> tacos = new ArrayList<>();
