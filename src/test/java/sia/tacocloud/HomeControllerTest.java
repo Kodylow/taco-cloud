@@ -12,7 +12,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
 
 // Not a @SpringBootTest because we want to test it in the context of Spring MVC
-@WebMvcTest (HomeController.class)
+@WebMvcTest
 public class HomeControllerTest {
 
 
